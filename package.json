@@ -1,5 +1,5 @@
 {
-  "name": "global-test",
+  "name": "global-this-test",
   "version": "1.0.0",
   "description": "an utility to propose a way to implement type-safety at run-time, not compile-time",
   "main": "index.mjs",
