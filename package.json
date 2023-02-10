@@ -1,0 +1,51 @@
+{
+  "name": "global-test",
+  "version": "1.0.0",
+  "description": "an utility to propose a way to implement type-safety at run-time, not compile-time",
+  "main": "index.mjs",
+  "type": "module",
+  "exports": {
+    "./mod-a": {
+      "import": "./mod-a.mjs",
+      "require": "./mod-a.cjs"
+    },
+    "./mod-b": {
+      "import": "./mod-b.mjs",
+      "require": "./mod-b.cjs"
+    },
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
+  "scripts": {
+    "test-esm": "node index.mjs",
+    "test-cjs": "node index.cjs",
+    "test": "npm run test-cjs; npm run test-esm;"
+  },
+  "files": [
+    "README.md",
+    "index.cjs",
+    "index.mjs",
+    "mod-a.cjs",
+    "mod-b.cjs",
+    "mod-a.mjs",
+    "mod-b.mjs",
+    "index.mjs",
+    "package.json"
+  ],
+  "author": {
+    "name": "Atsushi Oka",
+    "url": "https://github.com/a-oka-z/runtime-typesafety"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-oka-z/runtime-typesafety"
+  },
+  "license": "ISC",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
+
